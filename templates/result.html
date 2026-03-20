@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Montserrat',sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+        }
+
+        .card{
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(20px);
+            border-radius:20px;
+            padding:50px;
+            width:420px;
+            text-align:center;
+            color:white;
+            box-shadow:0 20px 40px rgba(0,0,0,0.5);
+            transition:0.4s ease;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 30px 60px rgba(0,0,0,0.6);
+        }
+
+        h1{
+            font-size:26px;
+            font-weight:700;
+            margin-bottom:20px;
+        }
+
+        .price{
+            font-size:32px;
+            font-weight:700;
+            margin-bottom:20px;
+            background: linear-gradient(45deg,#00c6ff,#0072ff);
+            -webkit-text-fill-color:transparent;
+        }
+
+        .accuracy{
+            font-size:14px;
+            opacity:0.8;
+            margin-bottom:30px;
+        }
+
+        a{
+            display:inline-block;
+            padding:12px 25px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:600;
+            background: linear-gradient(45deg,#00c6ff,#0072ff);
+            color:white;
+            transition:0.3s ease;
+        }
+
+        a:hover{
+            transform:scale(1.05);
+            box-shadow:0 10px 25px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Prediction Result</h1>
+
+    <div class="price">
+        ₹ {{ prediction }} Lakhs
+    </div>
+
+    <div class="accuracy">
+        Model Accuracy (R² Score): {{ accuracy }}
+    </div>
+
+    <a href="/">Predict Again</a>
+</div>
+
+</body>
+</html>
